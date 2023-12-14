@@ -22,7 +22,7 @@ function getTextColor(backgroundColor:string): string
 const Hue = ({hue, toggleLike}: Props) => {
   return (
     <div
-      className="flex flex-col h-64 aspect-square rounded-3xl text-center justify-between items-center"
+      className="flex flex-col h-64 aspect-square rounded-3xl justify-between"
       style={{ backgroundColor: hue.color }}
       onClick={ ()=> toggleLike && toggleLike(hue.id)}
     >
@@ -31,10 +31,10 @@ const Hue = ({hue, toggleLike}: Props) => {
       {/* {hue.isLiked && <span>HEART</span>}
       {!hue.isLiked && <span>NO HEART</span>} */}
 
-      {hue.isLiked ? <FaHeart className="text-[${getTextColor(hue.color)}]"/> : <FaRegHeart className="text-[${getTextColor(hue.color)}]"/> }
+      {hue.isLiked ? <FaHeart className="mt-32 ml-4 scale-150"/> : <FaRegHeart className="mt-32 ml-4 scale-150"/> }
 
       <div className="bg-black text-white flex w-full text-center justify-center p-4 rounded-b-2xl">
-        <p className="text-xl">{hue.username}</p>
+        <p className="text-xl self-center text-center">{hue.username}</p>
 
       </div>
     </div>
