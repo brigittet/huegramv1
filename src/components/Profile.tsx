@@ -1,5 +1,4 @@
 import './Palette.css'
-import HueObject from '../HueObject'
 
 
 
