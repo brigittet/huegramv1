@@ -1,4 +1,7 @@
 import './Palette.css'
+import HueObject from '../HueObject'
+
+
 
 const Profile = () => {
   return (
@@ -13,14 +16,14 @@ const Profile = () => {
           <div style={{ backgroundColor: '#cc2299'}}></div>
           <div style={{ backgroundColor: '#bb2299'}}></div>
           
-          <div style={{ backgroundColor: ''}}></div>
-          <div style={{ backgroundColor: ''}}></div>
-          <div style={{ backgroundColor: ''}}></div>
+          <div style={{ backgroundColor: '#B945E2'}}></div>
+          <div style={{ backgroundColor: '#E245E2'}}></div>
+          <div style={{ backgroundColor: '#EF4BC1'}}></div>
           <div ></div>
 
         </div>
 
-        <h1>@kavery</h1>
+        <h1 className='text-2xl p-2'>kavery</h1>
         <p>58 likes</p>
         <p>6 hues</p>
         {/* <div className="flex w-1/2">

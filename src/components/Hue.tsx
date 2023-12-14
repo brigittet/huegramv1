@@ -9,12 +9,14 @@ interface Props {
 
 function getTextColor(backgroundColor:string): string
 {
-  if(backgroundColor){
-    return "white";
-  }
-  else {
-    return "black ";
-  }
+  const r_num = Number("0x" + backgroundColor.slice(1, 3));
+  const g_num = Number("0x" + backgroundColor.slice(3, 5));
+  const b_num = Number("0x" + backgroundColor.slice(5, 7));
+
+  const hue_intensity = r_num * 0.299 + g_num * 0.587 + b_num * 0.114;
+
+  const text_color = hue_intensity > 186 ? "#000000" : "#FFFFFF";
+  return text_color;
 }
 
 const Hue = ({hue, toggleLike}: Props) => {
@@ -24,12 +26,12 @@ const Hue = ({hue, toggleLike}: Props) => {
       style={{ backgroundColor: hue.color }}
       onClick={ ()=> toggleLike && toggleLike(hue.id)}
     >
-      <p className={`text-${getTextColor(hue.color)} text-2xl opacity-80`}>{hue.color}</p>
+      <p className={`text-[${getTextColor(hue.color)}] text-2xl opacity-80`}>{hue.color}</p>
 
       {/* {hue.isLiked && <span>HEART</span>}
       {!hue.isLiked && <span>NO HEART</span>} */}
 
-      {hue.isLiked ? <FaHeart /> : <FaRegHeart /> }
+      {hue.isLiked ? <FaHeart className="text-[${getTextColor(hue.color)}]"/> : <FaRegHeart className="text-[${getTextColor(hue.color)}]"/> }
 
       <div className="bg-black text-white flex w-full text-center justify-center p-4 rounded-b-2xl">
         <p className="text-xl">{hue.username}</p>

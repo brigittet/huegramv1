@@ -1,6 +1,7 @@
 import HueObject from '../HueObject'
 import Hue from './Hue'
 import PostHue from './PostHue'
+import SearchBar from './SearchBar'
 
 
 interface Props {
@@ -12,7 +13,10 @@ interface Props {
 
 const Main = ({hues, addHue, toggleLike} : Props) => {
   return (
-    <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto'>
+    <div className='w-full '>
+      <SearchBar />
+      <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto'>
+
 
         <PostHue addHue={addHue}/>
 
@@ -22,7 +26,7 @@ const Main = ({hues, addHue, toggleLike} : Props) => {
             <Hue hue={hue} toggleLike={toggleLike}/>
        ))}
 
-        
+      </div>
 
     </div>
   )

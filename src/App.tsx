@@ -3,6 +3,7 @@ import Main from './components/Main'
 import Profile from './components/Profile'
 import { useEffect, useState } from 'react'
 import HueObject from './HueObject'
+import SearchBar from './components/SearchBar';
 
 function App() {
 
