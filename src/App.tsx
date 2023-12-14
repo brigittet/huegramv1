@@ -17,9 +17,11 @@ function App() {
 
   useEffect( ()=>
   {
-    fetch('./sampleData.json')
-    .then( res => res.json() )
-    .then( data => setHues(data) ) 
+    // fetch("<backend_base_url>/api/hues/")
+    fetch('https://greenegunnar.pythonanywhere.com/api/hues/')
+    .then(res => console.log(res))
+    // .then( res => res.json() )
+    // .then( data => setHues(data) ) 
   }, [])
 
   const addNewHue = (color:string ) => 
