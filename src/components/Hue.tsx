@@ -1,4 +1,7 @@
 import HueObject from "../HueObject";
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+
 interface Props {
   hue: HueObject,
   toggleLike?: (id?:number)=> void
@@ -26,7 +29,7 @@ const Hue = ({hue, toggleLike}: Props) => {
       {/* {hue.isLiked && <span>HEART</span>}
       {!hue.isLiked && <span>NO HEART</span>} */}
 
-      {hue.isLiked ? <span>HEART</span> : <span>NO HEART</span> }
+      {hue.isLiked ? <FaHeart /> : <FaRegHeart /> }
 
       <div className="bg-black text-white flex w-full text-center justify-center p-4 rounded-b-2xl">
         <p className="text-xl">{hue.username}</p>

@@ -2,7 +2,7 @@ import './Palette.css'
 
 const Profile = () => {
   return (
-    <div className='flex flex-col border-2 p-8 items-center text-white'>
+    <div className='flex flex-col border-2 p-8 items-center text-cyan-950'>
 
         
 
@@ -20,7 +20,9 @@ const Profile = () => {
 
         </div>
 
-        <h1>@kodom</h1>
+        <h1>@kavery</h1>
+        <p>58 likes</p>
+        <p>6 hues</p>
         {/* <div className="flex w-1/2">
             <img src={kaylee} alt="" className='rounded-full'/>
         </div> */}

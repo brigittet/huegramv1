@@ -41,7 +41,7 @@ function App() {
   }
 
   return (
-    <div className='flex bg-slate-800 h-screen'>
+    <div className='flex bg-white h-screen'>
       {/* <Menu /> */}
 
       <Main hues={hues} addHue = {addNewHue} toggleLike = {toggleLikeForHue}/>
