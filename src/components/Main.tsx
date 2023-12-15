@@ -14,11 +14,14 @@ interface Props {
 const Main = ({hues, addHue, toggleLike} : Props) => {
   return (
     <div className='w-full '>
-      <SearchBar />
+      <SearchBar /> 
+      {/* allHues = {hues} */}
+      <div className='flex justify-center'>
+      <PostHue addHue={addHue}/>
+      </div>
       <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto'>
 
 
-        <PostHue addHue={addHue}/>
 
 
         {hues.map( (hue) => ( 
